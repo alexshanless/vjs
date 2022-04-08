@@ -18,9 +18,11 @@
     </header>
     <section id="events">
       <h2>Events in Action</h2>
-      <button>Add</button>
-      <button>Remove</button>
+      <button @click="add">Add</button>
+      <button @click="reduce">Remove</button>
       <p>Result: {{ counter }}</p>
+      <input type="text" @input="setName" />
+      <p>Your name: {{name}}</p>
     </section>
   </body>
 </html>
