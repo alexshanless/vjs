@@ -16,6 +16,7 @@
     <header>
       <h1>Vue Course Goals</h1>
     </header>
+
     <section id="user-goals">
       <h2>My course goals</h2>
       <input type="text" v-model="enteredValue" />
@@ -23,8 +24,8 @@
       <p v-if="goals.length === 0">
         No goals have been added yet - please start adding some!
       </p>
-      <ul v-else v-for="item in goals">
-        <li>{{item}}</li>
+      <ul v-else v-for="(goal, i) in goals" @click="removeGoal(i)">
+        <li>{{goal}}</li>
       </ul>
     </section>
   </body>
