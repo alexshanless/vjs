@@ -17,20 +17,24 @@
 
 <script>
 export default {
-  props:[
-    'name',
-    'phoneNumber',
-    'emailAddress'
-  ],
+  props:{
+    name:{
+      type:String,
+      required:true
+    },
+    phoneNumber:{
+      type:String,
+      required:true
+    },
+    emailAddress:{
+      type:String,
+      required:true
+    }}
+  ,
   data() {
     return {
       detailsAreVisible: false,
-      // friend: {
-      //   id: "manuel",
-      //   name: "Manuel Lorenz",
-      //   phone: "0123 45678 90",
-      //   email: "manuel@localhost.com",
-      // },
+      
     };
   },
   methods: {
