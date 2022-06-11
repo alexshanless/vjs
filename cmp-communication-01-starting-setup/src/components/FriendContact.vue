@@ -12,12 +12,17 @@
         {{ emailAddress }}
       </li>
     </ul>
+     <button @click="$emit('delete',id)">Delete</button>
   </li>
 </template>
 
 <script>
 export default {
   props:{
+    id:{
+      type:String,
+      required:true
+    },
     name:{
       type:String,
       required:true
@@ -29,7 +34,9 @@ export default {
     emailAddress:{
       type:String,
       required:true
-    }}
+    }
+    },
+    emits:['delete']
   ,
   data() {
     return {
@@ -40,7 +47,8 @@ export default {
   methods: {
     toggleDetails() {
       this.detailsAreVisible = !this.detailsAreVisible;
-    }
+    },
+    
   }
 };
 </script>
